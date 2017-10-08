@@ -40,14 +40,14 @@ for twit in requestObject:
         list.append(vol)
         list.append(twt)
         list.append(url)
-        print(list[1])
+        print("The Tweet: "+list[1])
 
         public_tweets = api.search(list[1])
 
         for tweet in public_tweets:
             analysis = tb(tweet.text)
 
-        print('A Média de sentimento ' + str(np.mean(analysis.sentiment.polarity)))
+        print('The Sentiment Average ' + str(np.mean(analysis.sentiment.polarity)))
         print()
 
 
